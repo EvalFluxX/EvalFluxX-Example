@@ -1,6 +1,6 @@
 package dev.evalfluxx.demo;
 
-import dev.langchain4j.model.chat.ChatLanguageModel;
+import dev.langchain4j.model.chat.ChatModel;
 import dev.langchain4j.model.ollama.OllamaChatModel;
 
 /**
@@ -8,7 +8,7 @@ import dev.langchain4j.model.ollama.OllamaChatModel;
  */
 public class ChatService {
 
-    private final ChatLanguageModel model;
+    private final ChatModel model;
 
     public ChatService(String baseUrl, String modelName, double temperature) {
         this.model = OllamaChatModel.builder()
@@ -19,6 +19,6 @@ public class ChatService {
     }
 
     public String chat(String prompt) {
-        return model.generate(prompt);
+        return model.chat(prompt);
     }
 }
