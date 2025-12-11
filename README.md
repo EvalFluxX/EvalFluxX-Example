@@ -34,8 +34,6 @@ Bewertet die Qualität der KI-Erklärungen oder Nutzerausgaben.
 
 ```bash
 mvn clean compile
-mvn exec:java -Dexec.mainClass="dev.evalfluxx.demo.App"
-# führt EvalFluxX Evals aus (Konfiguration via evalfluxx-plugin)
 mvn evalfluxx:run
 ```
 
